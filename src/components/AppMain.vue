@@ -13,16 +13,24 @@ export default {
     data() {
         return {
             store,
-            projects: []
+            projects: [],
+            currentProjectPage: 1,
+            lastProjectPage: null,
         }
     },
     created() {
         this.getProjects();
     },
     methods: {
-        getProjects(){
-            axios.get(`${this.store.baseUrl}/api/projects`).then((response) => {
+        getProjects(page_number){
+            axios.get(`${this.store.baseUrl}/api/projects`, {
+                params: {
+                    page: page_number
+                }
+            }).then((response) => {
                 this.projects = response.data.results.data;
+                this.currentProjectPage = response.data.results.current_page;
+                this.lastProjectPage = response.data.results.last_page;
             })
         }
     },
@@ -40,6 +48,14 @@ export default {
                 <div class="row"> 
                     <ProjectCard v-for="project, index in projects" :key="index" :project="project" />
                 </div>
+                <div class="row"> 
+                        <div class="col-12">
+                            <ul class="pagination d-flex justify-content-center">
+                                <li> <button :class="currentProjectPage == 1 ? 'disabled' : ''" class="btn btn-square btn-outline-success" @click="getProjects(currentProjectPage - 1)">Precedente</button> </li>
+                                <li> <button :class="currentProjectPage == lastProjectPage ? 'disabled' : ''" class="btn btn-outline-success" @click="getProjects(currentProjectPage + 1)">Successivo</button> </li>
+                            </ul>
+                        </div>
+                </div>
             </div>
         </div>
     </main>
@@ -49,4 +65,4 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 @use '../styles/generals.scss' as *;
-</style>./ProjectCard.vue/index.js
+</style>
