@@ -22,7 +22,7 @@ export default {
     methods: {
         getProjects(){
             axios.get(`${this.store.baseUrl}/api/projects`).then((response) => {
-                console.log(response.data.results);
+                this.projects = response.data.results.data;
             })
         }
     },
@@ -36,10 +36,9 @@ export default {
             <div class="row"> 
                 <div class="col-12"> 
                     <h1 class="text-center">Benvenuto in Boolfolio</h1>
-                    <p>Lorem ipsum dolor et sdsdsdsd</p>
                 </div>
-                <div class="col-12"> 
-                    <ProjectCard />
+                <div class="row"> 
+                    <ProjectCard v-for="project, index in projects" :key="index" :project="project" />
                 </div>
             </div>
         </div>
