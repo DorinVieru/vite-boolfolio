@@ -44,28 +44,11 @@ export default {
             <h5 class="card-title text-capitalize">{{ project.title}}</h5>
             <p class="card-text"><strong>Descrizione:</strong> {{ createExcerpt() }}</p>
         </div>
-            <ul class="list-group list-group-flush">
+          <ul class="list-group list-group-flush">
                 <!-- <li class="list-group-item"><strong>Tipo di progetto:</strong> {{ $project->type != null ? $project->type->name : 'Non assegnato' }}</li> -->
                 <li class="list-group-item"><strong>Slug:</strong> {{ project.slug }}</li>
-                <!-- <li class="list-group-item"><strong>Techs:</strong> 
-                    @forelse ($project->technologies as $tech)
-                        <div class="my_badge d-inline-block mx-1 {{ $tech->badge_class }}">{{ $tech->name }}</div>
-                    @empty
-                        Il progetto non ha tecnologie assegnate.
-                    @endforelse
-                </li> -->
             </ul>
         <div class="card-body">
-            <!-- <a href="{{ $project->cover_image !== null ? asset('/storage/' . $project->cover_image) : asset('/img/another-image.jpg') }}" target="_blank" class="btn btn-primary"><i class="fa-solid fa-download"></i> Scarica l'immagine</a>
-            
-            <a href="{{ route('admin.projects.edit', ['project' => $project['id']]) }}">
-                <button type="button" class="btn btn-warning mx-2"><i class="fas fa-edit"></i> Modifica il progetto</button>
-            </a>
-            <form action="{{ route('admin.projects.destroy', ['project' => $project->id]) }}" method="POST" onsubmit="return confirm('Sei sicuro di voler cancellare {{ $project->title }}?')">
-            @csrf
-            @method('DELETE')
-                <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Cancella il progetto</button>
-            </form> -->
         </div>  
     </div>
  </div>

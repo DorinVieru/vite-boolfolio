@@ -1,11 +1,11 @@
 <!-- SEZIONE JS SCRIPT -->
 <script>
-import ProjectCard from './ProjectCard.vue'
+import ProjectCard from '../components/ProjectCard.vue'
 import { store } from '../store.js';
 import axios from 'axios';
 
 export default {
-    name:'AppMain',
+    name:'AppBlog',
     components: {
         ProjectCard
     },
@@ -43,7 +43,7 @@ export default {
         <div class="container mt-5"> 
             <div class="row"> 
                 <div class="col-12"> 
-                    <h1 class="text-center">Benvenuto in Boolfolio</h1>
+                    <h1 class="text-center">Il Blog del Boolfolio</h1>
                 </div>
                 <div class="row"> 
                     <ProjectCard v-for="project, index in projects" :key="index" :project="project" />
