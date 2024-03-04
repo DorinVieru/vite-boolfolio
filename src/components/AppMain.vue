@@ -49,12 +49,12 @@ export default {
                     <ProjectCard v-for="project, index in projects" :key="index" :project="project" />
                 </div>
                 <div class="row"> 
-                        <div class="col-12">
-                            <ul class="pagination d-flex justify-content-center">
-                                <li> <button :class="currentProjectPage == 1 ? 'disabled' : ''" class="btn btn-square btn-outline-success" @click="getProjects(currentProjectPage - 1)">Precedente</button> </li>
-                                <li> <button :class="currentProjectPage == lastProjectPage ? 'disabled' : ''" class="btn btn-outline-success" @click="getProjects(currentProjectPage + 1)">Successivo</button> </li>
-                            </ul>
-                        </div>
+                    <div class="col-12">
+                        <ul class="pagination d-flex justify-content-center">
+                            <li> <button :class="currentProjectPage == 1 ? 'disabled' : ''" class="btn btn-square btn-outline-success" @click="getProjects(currentProjectPage - 1)">Precedente</button> </li>
+                            <li> <button :class="currentProjectPage == lastProjectPage ? 'disabled' : ''" class="btn btn-outline-success" @click="getProjects(currentProjectPage + 1)">Successivo</button> </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

@@ -15,12 +15,6 @@ export default {
       
     }
   },
-  created() {
-
-  },
-  methods: {
-    
-  },
 }
 </script>
 
@@ -30,8 +24,8 @@ export default {
       <!-- HEADER -->
       <AppHeader />
       <div>
-        <!-- MAIN -->
-        <AppMain />
+        <!-- ROUTER VIEW -->
+        <router-view></router-view>
       </div>
   </div>
 </template>
