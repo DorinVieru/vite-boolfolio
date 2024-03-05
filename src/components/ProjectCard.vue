@@ -38,19 +38,21 @@ export default {
 <!-- SEZIONE HTML -->
 <template lang="">
   <div class="col-12 col-md-4 mt-5">
-    <div class="card">
-        <img :src="getUrlImage()" alt="" class="card-img-top">
-        <div class="card-body">
-            <h5 class="card-title text-capitalize">{{ project.title}}</h5>
-            <p class="card-text"><strong>Descrizione:</strong> {{ createExcerpt() }}</p>
-        </div>
-          <ul class="list-group list-group-flush">
-                <!-- <li class="list-group-item"><strong>Tipo di progetto:</strong> {{ $project->type != null ? $project->type->name : 'Non assegnato' }}</li> -->
-                <li class="list-group-item"><strong>Slug:</strong> {{ project.slug }}</li>
-            </ul>
-        <div class="card-body">
-        </div>  
-    </div>
+    <router-link :to="{ name: 'single-project', params: { slug: project.slug } }" class="link">
+      <div class="card">
+          <img :src="getUrlImage()" alt="" class="card-img-top">
+          <div class="card-body">
+              <h5 class="card-title text-capitalize">{{ project.title}}</h5>
+              <p class="card-text"><strong>Descrizione:</strong> {{ createExcerpt() }}</p>
+          </div>
+            <ul class="list-group list-group-flush">
+                  <!-- <li class="list-group-item"><strong>Tipo di progetto:</strong> {{ project.type.name }}</li> -->
+                  <!-- <li class="list-group-item"><strong>Techs:</strong> <span v-for="tech, index in project.technologies" :key="index" class="me-1"> {{ tech.name }}</span></li> -->
+              </ul>
+          <div class="card-body">
+          </div>  
+      </div>
+    </router-link>
  </div>
 </template>
 
@@ -58,5 +60,9 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 @use '../styles/generals.scss' as *;
+
+.link{
+  text-decoration: none;
+}
 
 </style>

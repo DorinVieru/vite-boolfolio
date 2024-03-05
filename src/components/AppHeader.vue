@@ -19,7 +19,7 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col-4">
-                    <h1>Boolfolio</h1>
+                    <a href="/" class="text-decoration-none"><h1>Boolfolio</h1></a>
                 </div> 
                 <div class="col-8">
                     <div class="float-end">
