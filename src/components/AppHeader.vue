@@ -42,7 +42,7 @@ export default {
 
 header{
     background-color: rgb(0, 21, 45);
-    padding: 20px 0px;
+    padding: 25px 15px 0px;
 
     h1{
         color: white;
@@ -52,10 +52,12 @@ header{
         li{
             color: white;
             padding: 10px 15px;
-            font-size: 19px;
+            font-size: 21px;
+            font-weight: 800;
 
             a{
                 text-decoration: none;
+                color: white;
 
                 &:hover{
                     text-decoration: underline;

@@ -51,8 +51,8 @@ export default {
                 <div class="row"> 
                     <div class="col-12">
                         <ul class="pagination d-flex justify-content-center">
-                            <li> <button :class="currentProjectPage == 1 ? 'disabled' : ''" class="btn btn-square btn-outline-success" @click="getProjects(currentProjectPage - 1)">Precedente</button> </li>
-                            <li> <button :class="currentProjectPage == lastProjectPage ? 'disabled' : ''" class="btn btn-outline-success" @click="getProjects(currentProjectPage + 1)">Successivo</button> </li>
+                            <li> <button :class="currentProjectPage == 1 ? 'disabled' : ''" class="btn btn-square btn-outline-success me-3 fw-bold" @click="getProjects(currentProjectPage - 1)">Precedente</button> </li>
+                            <li> <button :class="currentProjectPage == lastProjectPage ? 'disabled' : ''" class="btn btn-outline-success fw-bold" @click="getProjects(currentProjectPage + 1)">Successivo</button> </li>
                         </ul>
                     </div>
                 </div>
@@ -65,4 +65,8 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 @use '../styles/generals.scss' as *;
+
+.pagination{
+    margin: 20px 10px;
+}
 </style>

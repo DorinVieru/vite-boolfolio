@@ -29,7 +29,7 @@ export default {
 </template>
 
 <!-- SEZIONE STYLE -->
-<style lang="scss" scoped>
+<style lang="scss">
 @use './styles/partials/variables' as *;
 @use './styles/generals.scss' as *;
 
