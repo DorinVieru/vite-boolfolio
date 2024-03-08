@@ -64,8 +64,8 @@ export default {
                     </div>
                 </div>
                 <div class="col-12 text-center mt-5">
-                <a href="/blog" > <button class="btn btn-secondary ms-5"><i class="fa-solid fa-door-open"></i> Torna indietro</button></a>
-            </div>
+                    <a href="/blog" > <button class="btn my-btn px-5 fs-5 text-white"><i class="fa-solid fa-door-open"></i> Torna indietro</button></a>
+                </div>
             </div>
         </div>
     </main>
@@ -76,7 +76,14 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/generals.scss' as *;
 
-.pagination{
-    margin: 20px 10px;
+.my-btn{
+    background-color: #6C63FF;
+    transition: 0.5s;
+
+    &:hover{
+        background-color: white;
+        border: 2px solid #6C63FF !important;
+        color: black !important;
+    }
 }
 </style>

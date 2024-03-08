@@ -3,10 +3,12 @@
 
 // IMPORTO LE COMPONTENTI
 import AppHeader from './components/AppHeader.vue'
+import AppFooter from './components/AppFooter.vue'
 
 export default {
   components: {
     AppHeader,
+    AppFooter,
   },
   data() {
     return {
@@ -25,6 +27,8 @@ export default {
         <!-- ROUTER VIEW -->
         <router-view></router-view>
       </div>
+      <!-- FOOTER -->
+      <AppFooter />
   </div>
 </template>
 

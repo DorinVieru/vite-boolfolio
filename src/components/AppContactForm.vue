@@ -16,7 +16,7 @@ export default {
       message: '',
       loading: false,
       errors: '',
-      success: false,
+    // success: false,
     }
   },
   methods: {
@@ -43,7 +43,11 @@ export default {
                 this.phone = '';
                 this.message = '';
 
-                this.success = true;
+                // this.success = true;
+
+                this.$router.push({
+                    name: 'thank-you'
+                })
             }
             else{
                 this.errors = response.data.errors;
@@ -59,11 +63,11 @@ export default {
 <!-- SEZIONE HTML -->
 <template lang="">
   <div>
-    <div class="row" v-if="success">
+    <!-- <div class="row" v-if="success">
         <div class="col-12">
             <div class="alert alert-success fw-bold"><i class="fa-solid fa-check-double"></i> Modulo inviato con successo</div>
         </div>
-    </div>
+    </div> -->
     <form @submit.prevent="sendForm()" method="post">
         <div class="row">
             <div class="mb-3 col-6">

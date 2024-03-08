@@ -68,6 +68,9 @@ export default {
                         </ul>
                     </div>
                 </div>
+                <div class="col-12 text-center mt-5">
+                    <a href="/blog" > <button class="btn my-btn px-5 fs-5 text-white"><i class="fa-solid fa-door-open"></i> Torna a visualizzare i progetti</button></a>
+                </div>
             </div>
         </div>
     </main>
@@ -89,7 +92,18 @@ export default {
 
     &.active,
     &:hover{
-        background-color: green !important;
+        background-color: #6C63FF !important;
+    }
+}
+
+.my-btn{
+    background-color: #6C63FF;
+    transition: 0.5s;
+
+    &:hover{
+        background-color: white;
+        border: 2px solid #6C63FF !important;
+        color: black !important;
     }
 }
 </style>

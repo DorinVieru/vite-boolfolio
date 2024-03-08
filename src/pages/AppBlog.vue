@@ -51,7 +51,7 @@ export default {
         <div class="container mt-5"> 
             <div class="row"> 
                 <div class="col-12"> 
-                    <h1 class="text-center">Il Blog del Boolfolio</h1>
+                    <h1 class="text-center">I Progetti del Boolfolio</h1>
                 </div>
                 <div class="col-12 mt-5"> 
                     <router-link :to="{ name: 'projects-type', params: { slug: type.slug } }" class="badge rounded-pill text-bg-primary me-2 text-decoration-none type-badge" v-for="(type, index) in types" :key="index"> {{ type.name }} </router-link>
@@ -87,11 +87,11 @@ export default {
     transition: 0.4s;
 
     &:hover{
-        background-color: green !important;
+        background-color: #6C63FF !important;
     }
 
-    &:active{
-        background-color: green !important;
+    &.active{
+        background-color: #6C63FF !important;
     }
 }
 </style>
