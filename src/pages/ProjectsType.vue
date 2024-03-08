@@ -87,8 +87,8 @@ export default {
     font-size: 18px;
     transition: 0.4s;
 
-    &:hover,
-    &:active{
+    &.active,
+    &:hover{
         background-color: green !important;
     }
 }

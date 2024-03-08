@@ -25,10 +25,10 @@ export default {
                     <div class="float-end">
                         <ul class="list-unstyled d-flex align-items-center">
                             <li class="nav-item" v-for="item, index in store.menuItems" :key="index">
-                                <router-link :to="{ name: item.name }">{{ item.label }}</router-link>
+                                <router-link class="nav-link" :to="{ name: item.name }">{{ item.label }}</router-link>
                             </li>
                             <li class="nav-item">
-                                <a href="http://127.0.0.1:8000/login" target="_blank">Login</a>
+                                <a href="http://127.0.0.1:8000/login" target="_blank" class="nav-link"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
                             </li>
                         </ul>
                     </div>
@@ -45,7 +45,7 @@ export default {
 
 header{
     background-color: rgb(0, 21, 45);
-    padding: 25px 15px 0px;
+    padding: 30px 15px 20px;
 
     h1{
         color: white;
@@ -56,14 +56,19 @@ header{
             color: white;
             padding: 10px 15px;
             font-size: 21px;
-            font-weight: 800;
+            font-weight: 700;
 
-            a{
+            .nav-link{
                 text-decoration: none;
                 color: white;
+                transition: 0.2s;
 
-                &:hover{
-                    text-decoration: underline;
+                &.active,
+                &:hover {
+                    color: white;
+                    font-weight: 900;
+                    transform: scale(1.1);
+                    border-bottom: 4px solid white;
                 }
             }
 

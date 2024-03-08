@@ -36,12 +36,12 @@ export default {
                 <div class="col-12 mt-2">
                     <div class="row justify-content-center">
                         <div class="col-5">
-                            <p><strong>Indirizzo: </strong>Via cercala approfonditamente, 6 12058</p>
-                            <p><strong>Città: </strong>Monza (MI)</p>
+                            <p><strong><i class="fa-solid fa-location-dot"></i> Indirizzo: </strong>Via cercala approfonditamente, 6 12058</p>
+                            <p><strong><i class="fa-solid fa-tree-city"></i> Città: </strong>Monza (MI)</p>
                         </div>
                         <div class="col-3">
-                            <p><strong>Telefono: </strong>(+39) 348 7756 989</p>
-                            <p><strong>Email: </strong>info@boolfolio.it</p>
+                            <p><strong><i class="fa-solid fa-phone-volume"></i> Telefono: </strong>(+39) 348 7756 989</p>
+                            <p><strong><i class="fa-solid fa-envelope"></i> Email: </strong>info@boolfolio.it</p>
                         </div>
                     </div>
                 </div>
