@@ -9,7 +9,11 @@ export const store = reactive({
         },
         {
             name: 'blog',
-            label: 'Blog'
+            label: 'Progetti'
         },
+        // {
+        //     name: 'type-project',
+        //     label: 'Tipi di progetto'
+        // },
     ]
 });
