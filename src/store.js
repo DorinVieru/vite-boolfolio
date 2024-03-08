@@ -11,9 +11,9 @@ export const store = reactive({
             name: 'blog',
             label: 'Progetti'
         },
-        // {
-        //     name: 'type-project',
-        //     label: 'Tipi di progetto'
-        // },
+        {
+            name: 'contacts',
+            label: 'Contatti'
+        },
     ]
 });

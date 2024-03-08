@@ -27,6 +27,9 @@ export default {
                             <li class="nav-item" v-for="item, index in store.menuItems" :key="index">
                                 <router-link :to="{ name: item.name }">{{ item.label }}</router-link>
                             </li>
+                            <li class="nav-item">
+                                <a href="http://127.0.0.1:8000/login" target="_blank">Login</a>
+                            </li>
                         </ul>
                     </div>
                 </div> 
