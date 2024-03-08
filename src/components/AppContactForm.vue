@@ -20,7 +20,7 @@ export default {
     sendForm(){
         const data = {
             name: this.name,
-            surname: this.surnname,
+            surname: this.surname,
             email: this.email,
             phone: this.phone,
             message: this.message,
