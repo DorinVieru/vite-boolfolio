@@ -92,17 +92,29 @@ export default {
 
     &.active,
     &:hover{
-        background-color: #6C63FF !important;
+        background-color: #00c1d4 !important;
     }
 }
 
+.btn-outline-success{
+    --bs-btn-color: #6C63FF;
+    --bs-btn-border-color: #6C63FF;
+    --bs-btn-hover-bg: #6C63FF;
+    --bs-btn-hover-border-color: #6C63FF;
+    --bs-btn-active-bg: #6C63FF;
+    --bs-btn-active-border-color: #6C63FF;
+    --bs-btn-disabled-color: #6C63FF;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #6C63FF;
+}
+
 .my-btn{
-    background-color: #6C63FF;
+    background-color: #00c1d4;
     transition: 0.5s;
 
     &:hover{
         background-color: white;
-        border: 2px solid #6C63FF !important;
+        border: 2px solid #00c1d4 !important;
         color: black !important;
     }
 }

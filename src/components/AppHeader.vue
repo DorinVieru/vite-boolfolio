@@ -19,11 +19,11 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col-4 d-flex">
-                    <img src="../../public/website-jumbo.png" alt="logo" class="border rounded-4">
-                    <a href="/" class="text-decoration-none ms-3 text-logo"><h1>Boolfolio</h1></a>
+                    <a href="/" class="text-decoration-none"><img src="../../public/logo-projects.png" alt="logo" width="100px"></a>
+                    <a href="/" class="text-decoration-none ms-3 text-logo pt-4"><h1>Boolfolio</h1></a>
                 </div> 
                 <div class="col-8">
-                    <div class="float-end pt-2">
+                    <div class="float-end pt-4">
                         <ul class="list-unstyled d-flex align-items-center">
                             <li class="nav-item" v-for="item, index in store.menuItems" :key="index">
                                 <router-link class="nav-link" :to="{ name: item.name }">{{ item.label }}</router-link>
@@ -46,7 +46,7 @@ export default {
 
 header{
     background-color: rgb(0, 21, 45);
-    padding: 30px 15px;
+    padding: 20px 15px;
     
     img{
         width: 100px;
@@ -70,15 +70,15 @@ header{
             .nav-link{
                 text-decoration: none;
                 color: white;
-                transition: 0.3s;
+                transition: 0.2s;
+                border-bottom: 3px solid transparent;
                 
                 &.active,
                 &:hover {
-                    color: #6C63FF;
+                    color: #00c1d4;
                     font-weight: 900;
                     transform: scale(1.1);
-                    border-bottom: 4px solid #6C63FF;
-                    padding: 5px 0;
+                    border-bottom: 3px solid #00c1d4;
                 }
             }
 

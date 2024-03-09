@@ -19,10 +19,10 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col-3 d-flex">
-                    <img src="../../public/website-jumbo.png" alt="logo" class="border rounded-4" width="100px">
-                    <a href="/" class="text-decoration-none ms-3 pt-3"><h1>Boolfolio</h1></a>
+                    <a href="/" class="text-decoration-none"><img src="../../public/logo-projects.png" alt="logo" width="100px"></a>
+                    <a href="/" class="text-decoration-none ms-3 pt-4"><h1>Boolfolio</h1></a>
                 </div>
-                <div class="col-5 ps-5 pt-2">
+                <div class="col-5 ps-5 pt-3">
                     <ul class="list-unstyled d-flex align-items-center">
                         <li class="nav-item"><i class="fa-brands fa-facebook fs-1"></i></li>
                         <li class="nav-item"><i class="fa-brands fa-instagram fs-1"></i></li>
@@ -34,7 +34,7 @@ export default {
                     </ul>
                 </div> 
                 <div class="col-4">
-                    <div class="float-end pt-3">
+                    <div class="float-end pt-4">
                         <ul class="list-unstyled d-flex align-items-center">
                             <li class="nav-item-link">
                                 <a href="http://localhost:5174/contacts" class="nav-link"><i class="fa-solid fa-envelope"></i> info@boolfolio.com</a>
@@ -82,12 +82,13 @@ footer{
                 text-decoration: none;
                 color: white;
                 transition: 0.2s;
+                border-bottom: 3px solid transparent;
 
                 &.active,
                 &:hover {
-                    color: #6C63FF;
+                    color: #00c1d4;
                     font-weight: 900;
-                    border-bottom: 4px solid #6C63FF;
+                    border-bottom: 3px solid #00c1d4;
                 }
             }
 
@@ -95,7 +96,7 @@ footer{
     }
 
     hr{
-        color: #6C63FF;
+        color: #00c1d4;
         border: 2px solid;
     }
 
